@@ -1,8 +1,13 @@
 # Permissions for folders and files on the WebServer
 
+#### Create a custom User
+````
+adduser my-user
+````
+
 #### Set the files, folders owner
 ````
-sudo chown -R www-data:www-data /path/to/your/laravel/root/directory
+sudo chown -R my-user:www-data /path/to/your/laravel/root/directory
 ````
 
 ### __
