@@ -10,7 +10,8 @@ adduser my-user
 sudo chown -R my-user:www-data /path/to/your/laravel/root/directory
 ````
 
-### __
+### (Optional) 
+The webserver owns all the files, and is also the group, and you will have some problems uploading files or working with files via FTP, because your FTP client will be logged in as you, not your webserver, so add your user to the webserver user group:
 ````
 sudo usermod -a -G www-data ubuntu
 ````
