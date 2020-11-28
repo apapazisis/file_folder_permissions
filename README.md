@@ -20,5 +20,12 @@ sudo find /path/to/your/laravel/root/directory -type f -exec chmod 644 {} \;
 
 
 #### Set the folder permissions
-`````
+````
 sudo find /path/to/your/laravel/root/directory -type d -exec chmod 755 {} \;
+````
+
+#### Give the webserver the rights to read and write to storage and cache
+````
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+````
